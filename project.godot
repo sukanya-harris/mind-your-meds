@@ -22,6 +22,7 @@ GameState="*uid://c00g53le45mk2"
 
 [display]
 
+window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
