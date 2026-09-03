@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="logo_color" data-name="logo color" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #efefef;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke: #0096c7;
+        stroke-width: 9px;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-3 {
+        fill: #00b4d8;
+      }
+
+      .cls-5 {
+        fill: #0077b6;
+      }
+
+      .cls-6 {
+        fill: #f4f4f4;
+      }
+
+      .cls-4 {
+        fill: #48cae4;
+      }
+    </style>
+  </defs>
+  <rect class="cls-5" width="320" height="320"/>
+  <rect class="cls-1" x="55.7" y="51.63" width="188.52" height="218.43" rx="12" ry="12"/>
+  <line class="cls-2" x1="83.87" y1="100.67" x2="215.35" y2="100.67"/>
+  <line class="cls-2" x1="84.22" y1="138.67" x2="215.7" y2="138.67"/>
+  <line class="cls-2" x1="83.87" y1="176.67" x2="215.35" y2="176.67"/>
+  <line class="cls-2" x1="84.22" y1="214.67" x2="215.7" y2="214.67"/>
+  <path class="cls-4" d="M179.16,168.55l-32.51,51.46c-14.51,22.97-7.59,53.63,15.37,68.14h0c22.97,14.51,53.63,7.59,68.14-15.37l32.51-51.46-83.51-52.76Z"/>
+  <path class="cls-3" d="M179.16,168.55l32.51-51.46c14.51-22.97,45.17-29.88,68.14-15.37h0c22.97,14.51,29.88,45.17,15.37,68.14l-32.51,51.46-83.51-52.76Z"/>
+  <rect class="cls-6" x="188.42" y="117.34" width="16.7" height="130.78" rx="8.35" ry="8.35" transform="translate(128.02 -76.85) rotate(32.28)"/>
+</svg>

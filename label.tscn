@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://buew6lou7ny2s"]
+
+[node name="Label" type="Label" unique_id=1799733126]
+offset_left = 541.0
+offset_top = 318.0
+offset_right = 667.0
+offset_bottom = 341.0
+text = "Mind Your Meds"

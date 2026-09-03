@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://bwgxmykhscte0"]
+
+[ext_resource type="Script" uid="uid://d175qu528i6m0" path="res://src/GameFinish.cs" id="1_qojcb"]
+[ext_resource type="Texture2D" uid="uid://b5bqw018biawn" path="res://img/bg.png" id="2_x73sx"]
+[ext_resource type="FontFile" uid="uid://drhteu87bcnxf" path="res://fonts/Casual Memories Bold.ttf" id="3_x73sx"]
+[ext_resource type="Texture2D" uid="uid://8sjdv5jp0tas" path="res://img/buttonNormal_.png" id="4_aktgd"]
+[ext_resource type="FontFile" uid="uid://du2g0cf2j7te3" path="res://fonts/Super Bouncer.ttf" id="4_j87th"]
+[ext_resource type="Texture2D" uid="uid://c2jlidryo8nis" path="res://img/buttonPressed_.png" id="6_688sc"]
+[ext_resource type="Texture2D" uid="uid://cj07soapnygiw" path="res://img/buttonHover_.png" id="7_23lmv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7r1g0"]
+texture = ExtResource("4_aktgd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cqjrg"]
+texture = ExtResource("6_688sc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e2xy7"]
+texture = ExtResource("7_23lmv")
+
+[node name="GameFinish" type="Control" unique_id=1270715016]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qojcb")
+
+[node name="bg" type="TextureRect" parent="." unique_id=1056410335]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -681.00006
+offset_top = -363.00003
+offset_right = 1239.0
+offset_bottom = 717.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7290606, 0.7290606)
+texture = ExtResource("2_x73sx")
+expand_mode = 3
+
+[node name="resultsLabel" type="Label" parent="." unique_id=331493375]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.109000005
+anchor_top = 0.039
+anchor_right = 0.109000005
+anchor_bottom = 0.039
+offset_left = -0.5680084
+offset_top = -0.27200127
+offset_right = 919.432
+offset_bottom = 398.728
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8745098)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 11
+theme_override_constants/shadow_offset_y = 13
+theme_override_constants/outline_size = 37
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("3_x73sx")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 3
+
+[node name="restartButton" type="Button" parent="." unique_id=1917260831]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -182.35715
+offset_top = 130.0
+offset_right = 182.35718
+offset_bottom = 314.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_j87th")
+theme_override_font_sizes/font_size = 72
+theme_override_styles/normal = SubResource("StyleBoxTexture_7r1g0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cqjrg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_e2xy7")
+text = "RESTART"

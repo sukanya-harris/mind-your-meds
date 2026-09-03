@@ -1,0 +1,19 @@
+{
+    "questions": [
+        {
+            "question": "What DEA Schedule is Adderall?",
+            "choices": ["I", "II", "III", "IV"],
+            "correctAnswer": 1
+        },
+        {
+            "question": "Which of the following federal laws regulates the safety of drugs and medical devices?",
+            "choices": ["CSA", "HIPPA", "FD&C Act", "PPPA"],
+            "correctAnswer": 2
+        },
+        {
+            "question": "Which of the following acts led to most states requring the offer of patient counseling?",
+            "choices": ["CSA", "PPPA", "HIPPA", "OBRA"],
+            "correctAnswer": 3
+        }
+    ]
+}

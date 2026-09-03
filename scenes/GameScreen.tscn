@@ -1,0 +1,306 @@
+[gd_scene format=3 uid="uid://cu58t1eoud604"]
+
+[ext_resource type="Script" uid="uid://3mcbmmglu0td" path="res://src/GameScreen.cs" id="1_8jmft"]
+[ext_resource type="Shader" uid="uid://jb4p7ukyv8i8" path="res://scroll.gdshader" id="2_8wqyk"]
+[ext_resource type="Texture2D" uid="uid://bq8qbmhsvsgmt" path="res://img/animBG.png" id="3_8wqyk"]
+[ext_resource type="Texture2D" uid="uid://dt3f8ktdbcugd" path="res://img/questionBubble.png" id="4_1iofb"]
+[ext_resource type="Texture2D" uid="uid://bembl2o1svcsi" path="res://img/bunny_smiling.png" id="5_mfff6"]
+[ext_resource type="FontFile" uid="uid://olxp50rkff60" path="res://fonts/Casual Memories.ttf" id="6_itox2"]
+[ext_resource type="Texture2D" uid="uid://6y6hxtk8s5yi" path="res://img/bunny_talking.png" id="6_mfff6"]
+[ext_resource type="FontFile" uid="uid://drhteu87bcnxf" path="res://fonts/Casual Memories Bold.ttf" id="7_srnt6"]
+[ext_resource type="Texture2D" uid="uid://im3otrthrkg2" path="res://img/choiceButton.png" id="8_hv6d7"]
+[ext_resource type="Texture2D" uid="uid://dyfytdcf5npd8" path="res://img/choiceButton_Pressed.png" id="9_hshbf"]
+[ext_resource type="Texture2D" uid="uid://bmuw7ttm6e6yq" path="res://img/choiceButton_Hover.png" id="10_cjvrw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cqjrg"]
+shader = ExtResource("2_8wqyk")
+shader_parameter/speed = 0.025
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_afec1"]
+texture = ExtResource("8_hv6d7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3vj30"]
+texture = ExtResource("9_hshbf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bijwq"]
+texture = ExtResource("10_cjvrw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1iofb"]
+texture = ExtResource("8_hv6d7")
+
+[sub_resource type="Animation" id="Animation_8jmft"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../feedbackIcon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_8wqyk"]
+resource_name = "feedbackAnimation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../feedbackIcon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bijwq"]
+resource_name = "wrong"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../feedbackIcon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bijwq"]
+_data = {
+&"RESET": SubResource("Animation_8jmft"),
+&"correct": SubResource("Animation_8wqyk"),
+&"wrong": SubResource("Animation_bijwq")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfff6"]
+bg_color = Color(0.3, 0.3, 0.3, 0.47058824)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6s2dt"]
+bg_color = Color(0.92, 0.736, 0.23, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="GameScreen" type="Control" unique_id=1445793892]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8jmft")
+
+[node name="bg" type="TextureRect" parent="." unique_id=1011688022]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_cqjrg")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -576.0
+offset_top = -2.9999995
+offset_right = 576.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0180025, 1.0180025)
+texture = ExtResource("3_8wqyk")
+expand_mode = 3
+
+[node name="questionBubble" type="TextureRect" parent="." unique_id=333110596]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.272
+anchor_top = 0.032
+anchor_right = 0.272
+anchor_bottom = 0.032
+offset_left = -0.34402466
+offset_top = 0.26399994
+offset_right = 1367.5298
+offset_bottom = 594.264
+scale = Vector2(0.58631146, 0.58631146)
+texture = ExtResource("4_1iofb")
+expand_mode = 2
+
+[node name="pharmaBunnie" type="TextureRect" parent="." unique_id=225132841]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.030000001
+anchor_top = 0.201
+anchor_right = 0.030000001
+anchor_bottom = 0.201
+offset_left = 1.4400024
+offset_top = 17.751999
+offset_right = 1254.44
+offset_bottom = 1953.752
+scale = Vector2(0.26775151, 0.26775151)
+texture = ExtResource("5_mfff6")
+
+[node name="pharmaBunnie2" type="TextureRect" parent="." unique_id=1640025709]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.030000001
+anchor_top = 0.201
+anchor_right = 0.030000001
+anchor_bottom = 0.201
+offset_left = 1.4400024
+offset_top = 17.751999
+offset_right = 1254.44
+offset_bottom = 1953.752
+scale = Vector2(0.26775151, 0.26775151)
+texture = ExtResource("6_mfff6")
+
+[node name="questionLabel" type="Label" parent="." unique_id=802335459]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.324
+anchor_top = 0.068
+anchor_right = 0.324
+anchor_bottom = 0.068
+offset_left = -25.247986
+offset_top = -0.06400299
+offset_right = 712.752
+offset_bottom = 203.936
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_itox2")
+theme_override_font_sizes/font_size = 45
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=166004022]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.39800003
+anchor_top = 0.512
+anchor_right = 0.39800003
+anchor_bottom = 0.512
+offset_left = 0.5039673
+offset_top = 0.22399902
+offset_right = 619.50397
+offset_bottom = 376.474
+scale = Vector2(1, 0.79999995)
+theme_override_constants/h_separation = 31
+theme_override_constants/v_separation = 16
+columns = 2
+
+[node name="choiceButton1" type="Button" parent="GridContainer" unique_id=439162267]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+theme_override_fonts/font = ExtResource("7_srnt6")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_afec1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3vj30")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bijwq")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_1iofb")
+autowrap_mode = 3
+autowrap_trim_flags = 192
+
+[node name="choiceButton2" type="Button" parent="GridContainer" unique_id=88447274]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+theme_override_fonts/font = ExtResource("7_srnt6")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_afec1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3vj30")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bijwq")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_1iofb")
+autowrap_mode = 3
+autowrap_trim_flags = 192
+
+[node name="choiceButton3" type="Button" parent="GridContainer" unique_id=1452367766]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+theme_override_fonts/font = ExtResource("7_srnt6")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_afec1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3vj30")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bijwq")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_1iofb")
+autowrap_mode = 3
+autowrap_trim_flags = 192
+
+[node name="choiceButton4" type="Button" parent="GridContainer" unique_id=369194720]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+theme_override_fonts/font = ExtResource("7_srnt6")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_afec1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3vj30")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bijwq")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_1iofb")
+autowrap_mode = 3
+autowrap_trim_flags = 192
+
+[node name="feedbackIcon" type="TextureRect" parent="." unique_id=1150620671]
+custom_minimum_size = Vector2(230.6, 230.6)
+layout_mode = 0
+offset_left = 558.00006
+offset_top = 302.0
+offset_right = 974.9751
+offset_bottom = 602.0
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(115.3, 115.3)
+expand_mode = 3
+stretch_mode = 5
+
+[node name="feedbackAnimationPlayer" type="AnimationPlayer" parent="." unique_id=1965477784]
+root_node = NodePath("../GridContainer/choiceButton1")
+libraries/ = SubResource("AnimationLibrary_bijwq")
+
+[node name="progressBar" type="ProgressBar" parent="." unique_id=1719074663]
+clip_contents = true
+layout_mode = 0
+offset_left = 19.0
+offset_top = 13.0
+offset_right = 253.88889
+offset_bottom = 55.0
+theme_override_styles/background = SubResource("StyleBoxFlat_mfff6")
+theme_override_styles/fill = SubResource("StyleBoxFlat_6s2dt")
+show_percentage = false
+
+[connection signal="pressed" from="GridContainer/choiceButton1" to="." method="onChoice1_Pressed"]
+[connection signal="pressed" from="GridContainer/choiceButton2" to="." method="onChoice2_Pressed"]
+[connection signal="pressed" from="GridContainer/choiceButton3" to="." method="onChoice3_Pressed"]
+[connection signal="pressed" from="GridContainer/choiceButton4" to="." method="onChoice4_Pressed"]

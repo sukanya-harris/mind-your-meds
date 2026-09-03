@@ -1,0 +1,19 @@
+{
+    "questions": [
+        {
+            "question": "Which drug classification does citalopram belong to?",
+            "choices": ["Beta Blockers", "ACE Inhibitors", "SSRIs", "Antihistamines"],
+            "correctAnswer": 2
+        },
+        {
+            "question": "Propanolol is classified as what type of drug?",
+            "choices": ["ARB", "ACE Inhibitors", "PPI", "Beta Blockers"],
+            "correctAnswer": 3
+        },
+        {
+            "question": "Which of the following drugs is classified as an ARB?",
+            "choices": ["Zestril", "Tenormin", "Cozaar", "Norvasc"],
+            "correctAnswer": 2
+        }
+    ]
+}

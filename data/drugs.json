@@ -1,0 +1,54 @@
+{
+    "questions": [
+        {
+            "question": "What is the generic for Fosamax?",
+            "choices": ["Etidronate", "Alendronate", "Ibandronate", "Valium"],
+            "correctAnswer": 1
+        },
+        {
+            "question": "What is the generic for Norvasc?",
+            "choices": ["Amlodipine", "Atenolol", "Carvedilol", "Diclofenac"],
+            "correctAnswer": 0
+        },
+        {
+            "question": "What is the brand for Escitalopram?",
+            "choices": ["Pepcid", "Wellbutrin", "Lexapro", "Xanax"],
+            "correctAnswer": 2
+        },
+        {
+            "question": "What is the brand for Levetiracetam?",
+            "choices": ["Zestril", "Synthroid", "Vimpat", "Keppra"],
+            "correctAnswer": 3
+        },
+        {
+            "question": "What is the generic for Alprazolam?",
+            "choices": ["Hyzaar", "Lipitor", "Xanax", "Zovirax"],
+            "correctAnswer": 2
+        },
+        {
+            "question": "What is the generic for Zyrtec?",
+            "choices": ["Cetirizine", "Clindamycin", "Candesartan", "Clopidogrel"],
+            "correctAnswer": 0
+        },
+        {
+            "question": "What is the brand for Fluoxetine?",
+            "choices": ["Lasix", "Tricor", "Flonase", "Prozac"],
+            "correctAnswer": 3
+        },
+        {
+            "question": "What is the brand for Gabapentin?",
+            "choices": ["Microzide", "Neurotin", "Plaquenil", "DuoNeb"],
+            "correctAnswer": 1
+        },
+        {
+            "question": "What is the brand for Losartan?",
+            "choices": ["Mobic", "Mevacor", "Cozaar", "Antivert"],
+            "correctAnswer": 2
+        },
+        {
+            "question": "What is the generic for Singulair?",
+            "choices": ["Metoprolol", "Montelukast", "Meloxicam", "Metformin"],
+            "correctAnswer": 1
+        }
+    ]
+}

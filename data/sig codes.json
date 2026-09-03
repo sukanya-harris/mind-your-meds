@@ -1,0 +1,19 @@
+{
+    "questions": [
+        {
+            "question": "Define this sig code: QD",
+            "choices": ["Once daily", "Twice daily", "By mouth", "At night"],
+            "correctAnswer": 0
+        },
+        {
+            "question": "Turn this into sig code: Take one tablet by mouth twice daily in the evening",
+            "choices": ["1C po bid pm", "1T po bid pm", "1T po qd pm", "1C po bid am"],
+            "correctAnswer": 1
+        },
+        {
+            "question": "Define this sig code: 2gtt ou",
+            "choices": ["2 drops in each ear", "2 drops in right ear", "2 drops in each eye", "2 drops in left eye"],
+            "correctAnswer": 2
+        }
+    ]
+}
